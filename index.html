@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Presentation Viewer</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+
+    <div class="controls-bar">
+        <div class="btn-group">
+            <div class="file-input-wrapper">
+                <button>📂 Upload PDF</button>
+                <input type="file" id="file-upload" accept=".pdf,.pptx">
+            </div>
+            
+            <button id="mic-btn">🎤 Enable Mic</button>
+            <span id="file-name" class="info-text">No file loaded</span>
+        </div>
+
+        <div class="btn-group">
+            <button id="prev-btn" disabled>◀</button>
+            <span id="page-count" class="info-text">-- / --</span>
+            <button id="next-btn" disabled>▶</button>
+            <button id="fullscreen-btn" disabled>⛶</button>
+        </div>
+    </div>
+
+    <div id="presentation-container">
+        <div id="placeholder-text">
+            Upload PDF to begin
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
