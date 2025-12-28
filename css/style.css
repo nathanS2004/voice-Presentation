@@ -1,0 +1,109 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #222;
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.controls-bar {
+    background-color: #333;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    background-color: #444;
+    color: white;
+    border: 1px solid #555;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+button:hover:not(:disabled) {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Mic button specific states */
+.mic-active {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+.mic-denied {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+.file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+#presentation-container {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+}
+
+#placeholder-text {
+    color: #555;
+    font-size: 1.5rem;
+}
+
+canvas {
+    max-height: 95%;
+    max-width: 95%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#presentation-container:fullscreen {
+    background-color: black;
+}
+#presentation-container:fullscreen canvas {
+    max-height: 100%;
+    max-width: 100%;
+    box-shadow: none;
+}
+
+.info-text { color: #aaa; font-size: 14px; margin: 0 10px; }
